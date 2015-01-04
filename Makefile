@@ -79,7 +79,7 @@ SRCS = santa/BetterScrollView/BetterScrollView.cpp \
 	UI/URLView.cpp		\
 	UI/BitmapCatalog.cpp \
 	UI/BeNetButton.cpp \
-	UI/About.cpp \
+	UI/AboutWindow.cpp \
 	Audio/codec/g72x.c \
 	Audio/codec/g723_40.c \
 	Audio/codec/g723_24.c \

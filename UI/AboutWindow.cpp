@@ -1,5 +1,5 @@
 #ifndef _About_h
-#include "About.h"
+#include "AboutWindow.h"
 #endif
 
 #ifndef _Def_h
