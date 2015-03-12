@@ -10,6 +10,8 @@
 #include "BitmapCatalog.h"
 #endif
 
+#include <stdio.h>
+
 #include <File.h>
 #include <TranslatorRoster.h>
 #include <BitmapStream.h>
@@ -90,25 +92,27 @@ BitmapCatalog* BitmapCatalog::Instance()
 |		BBitmap *: Le pointeur le bitmap de l'image. NULL si la conversion a echouer.			|
 \*=============================================================================================*/
 BBitmap*
-BitmapCatalog::FetchBitmap(char* pzFileName, bool bTrans) 
+BitmapCatalog::FetchBitmap(const char* pzFileName, bool bTrans) 
 { 
 
 
-	BFile file(pzFileName, B_READ_ONLY); 
-	BTranslatorRoster *roster = BTranslatorRoster::Default(); 
-	BBitmapStream stream; 
-	BBitmap *result = NULL; 
-	if (roster->Translate(&file, NULL, NULL, &stream, B_TRANSLATOR_BITMAP) < B_OK) 
-		return NULL; 
-	stream.DetachBitmap(&result); 
+//	BFile file(pzFileName, B_READ_ONLY); 
+//	BTranslatorRoster *roster = BTranslatorRoster::Default(); 
+//	BBitmapStream stream; 
+//	BBitmap *result = NULL; 
+//	if (roster->Translate(&file, NULL, NULL, &stream, B_TRANSLATOR_BITMAP) < B_OK) 
+//		return NULL; 
+//	stream.DetachBitmap(&result); 
 
 
 //  OliverESP: 7 x 1 so -> #include <TranslationUtils.h> //OliverESP:
 //			   less code and works
-	//BBitmap *result = BTranslationUtils::GetBitmapFile(pzFileName);
+	BBitmap *result = BTranslationUtils::GetBitmapFile(pzFileName);
 	
-	if (result == NULL)
+	if (result == NULL) {
+		printf("Cant't find file = %s\n", pzFileName);
 		return NULL;
+	}
 
 	if(!bTrans)
 		return result;

@@ -17,11 +17,11 @@
 #endif
 
 #ifndef _About_h
-#include "About.h"
+#include "AboutWindow.h"
 #endif
 
 #ifndef __BENET_MAIL_IP_WINDOWS__
-#include "BeNetMailIPWindow.h"
+//#include "BeNetMailIPWindow.h"
 #endif
 
 #ifndef __RemoteWindow__
@@ -70,7 +70,7 @@ public:
 
 //private: // Functions
 	void 			ShowWindow(BWindow* pWindow);
-	void			ShowMailIPWindow();
+//	void			ShowMailIPWindow();
 	void			ToggleToolBar();
 	void			ToggleStatusBar();
 	void			LaunchHelp();
@@ -90,7 +90,7 @@ private: // Data
 	BookmarksWindow*	m_pBookmarksWindow;
 	PreferencesWindow*	m_pPreferencesWindow;
 	AboutWindow*		m_pAboutWindow;
-	BeNetMailIPWindow*	m_pMailIPWindow;
+//	BeNetMailIPWindow*	m_pMailIPWindow;
 
 	BeNetMenu*			m_pMenu;
 	ToolBarView*		m_pToolBar;

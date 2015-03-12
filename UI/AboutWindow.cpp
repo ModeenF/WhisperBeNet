@@ -20,7 +20,6 @@
 
 
 #include <interface/StringView.h> // experimentals...
-//#include "/boot/yt/src/unstable/headers_p/interface/StringView.h"
 #include "locale/Locale.h"
 
 // BRect(100,100,220,400)
@@ -40,7 +39,10 @@ AboutWindow::AboutWindow() :
 
 	// Creating the bitmap and the new size of the window
 	BBitmap* logo = BitmapCatalog::Instance()->FetchBitmap("Bitmaps/logo.bmp",false);
-	ResizeTo(logo->Bounds().right - logo->Bounds().left+40, 310);
+	if(logo == NULL)
+		printf("it's null\n");
+		
+	ResizeTo(logo->Bounds().right - logo->Bounds().left + 40, 310);
 
 	//Placing the logo
 	m_pLogoView = new BitmapView(logo->Bounds(),logo);
@@ -51,7 +53,7 @@ AboutWindow::AboutWindow() :
 
 	//Main view
 	AddChild(m_pAboutView = new BView(Bounds(),"AboutView",0,B_WILL_DRAW));
-	m_pAboutView->SetViewColor(222,223,222);
+	m_pAboutView->SetViewColor(222, 223, 222);
 
 
 	b = Frame();

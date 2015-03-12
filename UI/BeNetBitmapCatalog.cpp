@@ -19,11 +19,11 @@ BeNetBitmapCatalog* BeNetBitmapCatalog::m_pInstance = NULL;
 \*=============================================================================================*/
 BeNetBitmapCatalog::BeNetBitmapCatalog()
 {
-	m_pLArrow = FetchBitmap("/boot/home/LArrow.jpg", true);
-	m_pRArrow = FetchBitmap("/boot/home/RArrow.jpg", true);
-	m_pAccept = FetchBitmap("/boot/home/Accept.tif", true);
-	m_pCancel = FetchBitmap("/boot/home/Cancel.jpg", true);
-	m_pDelete = FetchBitmap("/boot/home/Delete.jpg", true);
+	m_pLArrow = FetchBitmap("Bitmaps/LArrow.jpg", true);
+	m_pRArrow = FetchBitmap("Bitmaps/RArrow.jpg", true);
+	m_pAccept = FetchBitmap("Bitmaps/Accept.tif", true);
+	m_pCancel = FetchBitmap("Bitmaps/Cancel.jpg", true);
+	m_pDelete = FetchBitmap("Bitmaps/Delete.jpg", true);
 }//Fin de BeNetBitmapCatalog.
 
 /*=============================================================================================*\

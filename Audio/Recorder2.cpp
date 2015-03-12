@@ -92,14 +92,12 @@ Recorder::Recorder(ScopeView* scopeView)
 	if (err < B_OK ) {
 		MediaProblem("No audio input found\n");
 		return;
-	}
-	else {
+	} else {
 		if (CheckNoneInput()) {
 			BAlert *myAlert = new BAlert("Hmmm", _T("We found a 'None In' input in the system\nRecording features disabled") , _T("Ok"), NULL, NULL, B_WIDTH_AS_USUAL, B_EVEN_SPACING, B_INFO_ALERT);
 			myAlert->Go();
 			return;
-			}
-		else {
+		} else {
 			BMessage* msg = new BMessage(DEVICE);
 			msg->AddInt32("node_id", m_audioInputNode.node);
 			SelectDevice(msg);
@@ -553,14 +551,16 @@ Recorder::SetRecVolume(float volume)
 	m_recVolume = volume;
 }
 
-void Recorder::MediaProblem(const char* string) {
+
+void
+Recorder::MediaProblem(const char* string)
+{
 		BString problem;
 
 		problem << "There was an error setting the sound recording:\n\n" << string;
 
 		BAlert *myAlert = new BAlert("Known", problem.String(),"Ok", NULL, NULL, B_WIDTH_AS_USUAL, B_EVEN_SPACING, B_STOP_ALERT);
 		myAlert->Go();
-
 }
 //////////////////////////////////////
 //////////////////////////////////////

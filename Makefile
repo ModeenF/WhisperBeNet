@@ -34,69 +34,69 @@ APP_MIME_SIG=
 #	if two source files with the same name (source.c or source.cpp)
 #	are included from different directories.  Also note that spaces
 #	in folder names do not work well with this makefile.
-SRCS = santa/BetterScrollView/BetterScrollView.cpp \
-	santa/ColumnListView/CLVColumn.cpp \
-	santa/ColumnListView/CLVColumnLabelView.cpp \
-	santa/ColumnListView/CLVEasyItem.cpp \
-	santa/ColumnListView/CLVListItem.cpp \
-	santa/ColumnListView/ColumnListView.cpp \
-	santa/Cursors/Cursors.cpp \
-	santa/NewStrings/NewStrings.cpp \
-	santa/PrefilledBitmap/PrefilledBitmap.cpp \
-	santa/ScrollViewCorner/ScrollViewCorner.cpp \
-	Network/protocol.cpp \
-	Network/network.cpp \
-	Network/connection.cpp \
-	Network/client.cpp \
-	Network/NetworkInterface.cpp \
-	UI/email/EMailIPManager.cpp \
-	UI/email/EMailIP.cpp \
-	UI/email/BeNetMailIPWindow.cpp \
-	UI/email/BeNetMailIPPictureView.cpp \
-	UI/email/BeNetMailIPMessageView.cpp \
-	UI/email/BeNetMailIPInfoView.cpp \
-	UI/email/BeNetMailIPControlView.cpp \
-	UI/WaitWindow.cpp \
-	UI/ToolBarView.cpp \
-	UI/StatusBar.cpp \
-	Audio/SoundControlsView.cpp \
-	UI/ShrinkView.cpp \
-	Audio/ScopeView.cpp \
-	UI/RemoteWindow.cpp \
-	UI/PreferencesWindow.cpp \
-	UI/BookmarksShortcut.cpp \
-	UI/PreferencesViews.cpp \
-	UI/BookmarkTools/PostDispatchInvoker.cpp \
-	UI/PictureView.cpp \
-	UI/Output.cpp \
-	UI/InformationView.cpp \
-	UI/ConnectView.cpp \
-	UI/BubbleHelper.cpp \
-	UI/BookmarksWindow.cpp \
-	UI/BookmarkItem.cpp \
-	UI/Bookmarks.cpp \
-	UI/BitmapView.cpp	\
-	UI/URLView.cpp		\
-	UI/BitmapCatalog.cpp \
-	UI/BeNetButton.cpp \
-	UI/AboutWindow.cpp \
-	Audio/codec/g72x.c \
-	Audio/codec/g723_40.c \
-	Audio/codec/g723_24.c \
-	Audio/codec/g721.c \
-	Audio/codec/g711.c \
-	Audio/SoundUtils.cpp \
-	Audio/mediarecorder/MediaRecorder.cpp \
-	Audio/mediarecorder/MediaRecorderNode.cpp \
-	Audio/Recorder2.cpp \
-	Audio/Player.cpp \
-	Audio/Decode.cpp \
-	Audio/Encode.cpp \
-	UI/Preferences.cpp \
-	UI/BeNetMenu.cpp \
-	UI/BeNetWindow.cpp \
-	UI/BeNetApp.cpp \
-	main.cpp
+SRCS = santa/BetterScrollView/BetterScrollView.cpp
+SRCS += santa/ColumnListView/CLVColumn.cpp
+SRCS += santa/ColumnListView/CLVColumnLabelView.cpp
+SRCS += santa/ColumnListView/CLVEasyItem.cpp
+SRCS += santa/ColumnListView/CLVListItem.cpp
+SRCS += santa/ColumnListView/ColumnListView.cpp
+SRCS += santa/Cursors/Cursors.cpp
+SRCS += santa/NewStrings/NewStrings.cpp
+SRCS += santa/PrefilledBitmap/PrefilledBitmap.cpp
+SRCS += santa/ScrollViewCorner/ScrollViewCorner.cpp
+SRCS += Network/protocol.cpp
+SRCS += Network/network.cpp
+SRCS += Network/connection.cpp
+SRCS += Network/client.cpp
+SRCS += Network/NetworkInterface.cpp
+#SRCS += UI/email/EMailIPManager.cpp
+#SRCS += UI/email/EMailIP.cpp
+#SRCS += UI/email/BeNetMailIPWindow.cpp
+#SRCS += UI/email/BeNetMailIPPictureView.cpp
+#SRCS += UI/email/BeNetMailIPMessageView.cpp
+#SRCS += UI/email/BeNetMailIPInfoView.cpp
+#SRCS += UI/email/BeNetMailIPControlView.cpp
+SRCS +=	UI/WaitWindow.cpp
+SRCS += UI/ToolBarView.cpp
+SRCS += UI/StatusBar.cpp
+SRCS += Audio/SoundControlsView.cpp
+SRCS += UI/ShrinkView.cpp
+SRCS += Audio/ScopeView.cpp
+SRCS += UI/RemoteWindow.cpp
+SRCS += UI/PreferencesWindow.cpp
+SRCS += UI/BookmarksShortcut.cpp
+SRCS += UI/PreferencesViews.cpp
+SRCS += UI/BookmarkTools/PostDispatchInvoker.cpp
+SRCS += UI/PictureView.cpp
+SRCS += UI/Output.cpp
+SRCS += UI/InformationView.cpp
+SRCS += UI/ConnectView.cpp
+SRCS += UI/BubbleHelper.cpp
+SRCS += UI/BookmarksWindow.cpp
+SRCS += UI/BookmarkItem.cpp
+SRCS += UI/Bookmarks.cpp
+SRCS += UI/BitmapView.cpp
+SRCS += UI/URLView.cpp
+SRCS += UI/BitmapCatalog.cpp
+SRCS += UI/BeNetButton.cpp
+SRCS += UI/AboutWindow.cpp
+SRCS += Audio/codec/g72x.c
+SRCS += Audio/codec/g723_40.c
+SRCS += Audio/codec/g723_24.c
+SRCS += Audio/codec/g721.c
+SRCS += Audio/codec/g711.c
+SRCS += Audio/SoundUtils.cpp
+SRCS += Audio/mediarecorder/MediaRecorder.cpp
+SRCS += Audio/mediarecorder/MediaRecorderNode.cpp
+SRCS += Audio/Recorder2.cpp
+SRCS += Audio/Player.cpp
+SRCS += Audio/Decode.cpp
+SRCS += Audio/Encode.cpp
+SRCS += UI/Preferences.cpp
+SRCS += UI/BeNetMenu.cpp
+SRCS += UI/BeNetWindow.cpp
+SRCS += UI/BeNetApp.cpp
+SRCS += main.cpp
 
 #	specify the resource definition files to use
 #	full path or a relative path to the resource file can be used.
@@ -152,7 +152,8 @@ LOCAL_INCLUDE_PATHS =  santa \
 	santa/BetterScrollView \
 	santa/ScrollViewCorner \
 	santa/Cursors \
-	santa/NewStrings
+	santa/NewStrings\
+	UI Audio
 
 #	santa/ScrollViewCorner 
 #	specify the level of optimization that you desire

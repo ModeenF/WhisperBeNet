@@ -44,8 +44,8 @@ BeNetMenu::BeNetMenu(BRect frame)
 	m_pTools->SetTargetForItems(this);
 	m_pTools->AddItem(m_pConnect = new BMenuItem(_T("Connect"), new BMessage(MSG_MENU_CONNECT), 'C'));
 	m_pTools->AddItem(m_pDisconnect = new BMenuItem(_T("Disconnect"), new BMessage(MSG_MENU_DISCONNECT), 'D'));
-	m_pTools->AddItem(m_pCheckMail = new BMenuItem(_T("Check for connection"), new BMessage(MSG_MENU_MAILIP), 'K'));
-	m_pCheckMail->SetEnabled(false); // OliverESP: sorry not revised 
+//	m_pTools->AddItem(m_pCheckMail = new BMenuItem(_T("Check for connection"), new BMessage(MSG_MENU_MAILIP), 'K'));
+//	m_pCheckMail->SetEnabled(false); // OliverESP: sorry not revised 
 	m_pTools->AddItem(m_pGoOnline = new BMenuItem(_T("Go online"), new BMessage(MSG_MENU_ONLINE), 'L'));
 	m_pTools->AddItem(m_pGoOffline = new BMenuItem(_T("Go offline"), new BMessage(MSG_MENU_OFFLINE), 'F'));
 	AddItem(m_pTools);

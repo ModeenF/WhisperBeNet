@@ -63,7 +63,7 @@ PEOPLE_ID_NODE * EMailIP::CheckMail(bool bCheckAll)
 	int32 iResult = 0;
 	m_pFirstID = NULL;
 
-	status_t err = BMailDaemon::CheckMail(true);
+	status_t err = BMailDaemon::CheckMail(/*true*/);//Uses ID now
 	iResult = BMailDaemon::CountNewMessages(true);
 	if(!bCheckAll && (iResult == 0 || err < B_OK))
 	{

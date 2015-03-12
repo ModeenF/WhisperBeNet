@@ -45,7 +45,6 @@ public:
 	//UI Interface
 	status_t Initialize();
 	status_t Quit();
-//	status_t ConnectFromUI(ulong lRemoteAddress);
 	status_t ConnectFromUI(char* host);
 
 	status_t Disconnect();

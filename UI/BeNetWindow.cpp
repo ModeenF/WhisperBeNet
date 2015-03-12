@@ -7,7 +7,7 @@
 #endif
 
 #ifndef _EMAILIP_
-#include "EMailIP.h"
+//#include "EMailIP.h"
 #endif
 
 #ifndef _Def_h
@@ -164,7 +164,7 @@ BeNetWindow::MessageReceived(BMessage* msg)
 		case MSG_MENU_OUTPUTWINDOW:		ShowWindow(Output::Instance()); break; 
 		case MSG_MENU_PREFERENCES:		ShowWindow(m_pPreferencesWindow); break; 
 		case MSG_MENU_BOOKMARKS:		ShowWindow(m_pBookmarksWindow); break; 
-		case MSG_MENU_MAILIP:			ShowMailIPWindow(); break; 
+//		case MSG_MENU_MAILIP:			ShowMailIPWindow(); break; 
 		case MSG_MENU_HELP:				LaunchHelp(); break; 
 		case MENU_BOOKMARKS:			m_pConnectView->MessageReceived(msg); break;
 		case MSG_MENU_CONNECT:			Connect(); break;
@@ -258,7 +258,7 @@ BeNetWindow::LaunchHelp()
 
 }
 
-
+/*
 void
 BeNetWindow::ShowMailIPWindow()
 {
@@ -275,7 +275,7 @@ BeNetWindow::ShowMailIPWindow()
 	
 	m_pMailIPWindow = new BeNetMailIPWindow(node);
 	m_pMailIPWindow->Show();
-}
+}*/
 
 
 void

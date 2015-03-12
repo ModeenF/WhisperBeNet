@@ -6,8 +6,6 @@
 #include <string.h>
 #include <kernel/OS.h>
 
-//#include </boot/develop/headers/be/net/socket.h>
-//#include </boot/develop/headers/be/net/netdb.h> 
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
@@ -20,7 +18,6 @@ public:
 	CConnection();
 	~CConnection();
 	
-//	void		SetRemoteAddress(ulong RemoteAddress);
 	status_t	SetRemoteAddress(char* host);
 	void    	SetRemoteConnectingAddress(sockaddr_in& RemoteAddress);
 
@@ -32,7 +29,6 @@ public:
 
 	void	SendRtcpUdp(char *data);
 
-//	int		RecvRtcpUdp(char* pchBuffer, int nMaxLen, ulong* lRemoteAddress);
 	int     RecvRtcpUdp(char* pchBuffer, int nMaxLen, sockaddr_in& lRemoteAddress);
 
 	const char*	GetRemoteIP()					{return inet_ntoa(addressRemoteRtpUdp.sin_addr);}

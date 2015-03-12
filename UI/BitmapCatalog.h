@@ -18,7 +18,7 @@ public:
 	static BitmapCatalog* Instance();
 	~BitmapCatalog();
 
-	BBitmap* FetchBitmap(char *filename, bool bTran = false); 
+	BBitmap* FetchBitmap(const char *filename, bool bTran = false); 
 				
 	BBitmap* GetLeftArrow()				{return m_pLArrow;}
 	BBitmap* GetRightArrow()			{return m_pRArrow;}
